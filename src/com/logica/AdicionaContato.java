@@ -53,6 +53,4 @@ public class AdicionaContato implements Logica{
 		
 		return "/WEB-INF/jsp/contatoAdicionado.jsp";
 	}
-
-	
 }

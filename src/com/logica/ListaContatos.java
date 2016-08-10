@@ -19,5 +19,4 @@ public class ListaContatos implements Logica{
 		
 		return "/WEB-INF/jsp/listaContatos.jsp";
 	}
-
 }

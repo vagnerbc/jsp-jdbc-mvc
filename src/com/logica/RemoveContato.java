@@ -18,8 +18,6 @@ public class RemoveContato implements Logica{
 		ContatoDao dao = new ContatoDao();
 	    dao.remove(contato);
 	    
-	    return "mvc?logica=ListaContatos";
-		
+	    return "mvc?logica=ListaContatos";	
 	}
-
 }

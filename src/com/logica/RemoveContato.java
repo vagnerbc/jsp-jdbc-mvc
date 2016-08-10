@@ -1,5 +1,7 @@
 package com.logica;
 
+import java.sql.Connection;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -15,7 +17,8 @@ public class RemoveContato implements Logica{
 		Contato contato = new Contato();
 		contato.setId(Long.parseLong(request.getParameter("id")));
 		
-		ContatoDao dao = new ContatoDao();
+		Connection connection = (Connection) request.getAttribute("connection");
+		ContatoDao dao = new ContatoDao(connection);
 	    dao.remove(contato);
 	    
 	    return "mvc?logica=ListaContatos";	
